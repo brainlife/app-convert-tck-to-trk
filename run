@@ -5,11 +5,12 @@
 
 module load singularity 2> /dev/null
 
-make -p trk
 SINGULARITYENV_PYTHONNOUSERSITE=true singularity exec -e docker://brainlife/dipy:0.13 ./convert_tck_to_trk.py
 
-if [ -s ./trk/track.trk ] 
+if [ -s track.trk ] 
 then
+	mkdir -p trk
+	mv track.trk trk/track.trk
 	echo 0 > finished
 else
 	echo "failed"
