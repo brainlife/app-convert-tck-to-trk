@@ -4,8 +4,9 @@ from nibabel.orientations import aff2axcodes
 
 
 def main():
+	
 	with open('config.json') as config_json:
-    	config = json.load(config_json)
+		config = json.load(config_json)
     
 	tck_file = config["tracks"]
 	anatomy_file = config["dwi"]
