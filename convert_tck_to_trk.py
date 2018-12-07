@@ -4,7 +4,6 @@ from nibabel.orientations import aff2axcodes
 
 
 def main():
-
 	with open('config.json') as config_json:
     	config = json.load(config_json)
     
