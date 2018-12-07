@@ -1,0 +1,4 @@
+{
+    "tck": "tractography.tck",
+    "dwi": "dwi.nii.gz"
+}
