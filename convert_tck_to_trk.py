@@ -10,7 +10,7 @@ def main():
     
 	tck_file = config["tracks"]
 	anatomy_file = config["dwi"]
-	trk_file = './trk/track.trk'
+	trk_file = 'track.trk'
 
     nii = nib.load(anatomy_file)
         
