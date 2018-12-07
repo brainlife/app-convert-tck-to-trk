@@ -35,7 +35,7 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.132](https://
 
 ```json
 {
-        "track": "./input/track/track.tck",
+        "tck": "./input/track/track.tck",
 	"dwi": "./input/dtiinit/dwi_aligned_trilin_noMEC.nii.gz"
 }
 ```
