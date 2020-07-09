@@ -1,5 +1,5 @@
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
-[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.1-blue.svg)](https://doi.org/10.25663/bl.app.1)
+[![Run on Brainlife.io](https://img.shields.io/badge/brainlife.app.133-blue.svg)](https://doi.org/10.25663/brainlife.app.133)
 
 # app-convert-tck-to-trk
 
@@ -25,7 +25,7 @@ This service will convert a .tck file to .trk file format using nibabel.
 
 ### On Brainlife.io
 
-You can submit this App online at [https://doi.org/10.25663/bl.app.132](https://doi.org/10.25663/bl.app.132) via the "Execute" tab.
+You can submit this App online at [https://doi.org/10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133) via the "Execute" tab.
 
 ### Running Locally (on your machine)
 
