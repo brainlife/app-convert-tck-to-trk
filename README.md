@@ -23,6 +23,10 @@ brainlife.io is publicly funded and for the sustainability of the project it is 
 [![NSF-IIS-1912270](https://img.shields.io/badge/NSF_IIS-1912270-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1912270)
 [![NIH-NIBIB-R01EB029272](https://img.shields.io/badge/NIH_NIBIB-R01EB029272-green.svg)](https://grantome.com/grant/NIH/R01-EB029272-01)
 
+### Citation
+We kindly ask that you cite the following article when publishing papers and code using this code: 
+1. Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
 ### Reference
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1464282.svg)](https://doi.org/10.5281/zenodo.1464282)
 
