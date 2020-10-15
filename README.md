@@ -1,5 +1,5 @@
 [![Abcdspec-compliant](https://img.shields.io/badge/ABCD_Spec-v1.1-green.svg)](https://github.com/brain-life/abcd-spec)
-[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.133-blue.svg)](https://doi.org/10.25663/bl.app.133)
+[![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.133-blue.svg)](https://doi.org/10.25663/brainlife.app.133)
 
 # app-convert-tck-to-trk
 
