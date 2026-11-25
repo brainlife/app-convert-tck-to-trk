@@ -10,18 +10,18 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-> 📍 **This branch, `1.0`, runs 2 brainlife.io Apps** that share the same code:
+> **This branch, `1.0`, runs 2 brainlife.io Apps** that share the same code:
 >
 > - Convert tck to trk in T1 space ([doi:10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133))
 > - Convert tck to trk in DWI space ([doi:10.25663/brainlife.app.132](https://doi.org/10.25663/brainlife.app.132))
 >
 > The other Apps in this repository are listed under **Versions on brainlife.io** below.
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
-### 🧩 Convert tck to trk in T1 space
+### Convert tck to trk in T1 space
 
 > **Converts an MRtrix .tck tractogram to TrackVis .trk format with nibabel, using a T1-weighted image as the reference space for the trk header; a format conversion utility.**
 
@@ -29,26 +29,26 @@ Loads the .tck streamlines with nibabel and saves them as track.trk with the vox
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/anat/t1w` · `neuro/track/tck` |
-| 📤 **Outputs** | `neuro/track/trk` |
-| 🐳 **Container** | `brainlife/dipy:0.13` |
-| ⚙️ **Resources** | 8 CPUs · 0.17 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133) |
+| **Inputs** | `neuro/anat/t1w` · `neuro/track/tck` |
+| **Outputs** | `neuro/track/trk` |
+| **Container** | `brainlife/dipy:0.13` |
+| **Resources** | 8 CPUs · 0.17 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `t1` | `neuro/anat/t1w` | yes | T1-weighted NIfTI image that provides the reference space (affine, voxel size, dimensions) for the output trk header. The tck streamlines must already be in the space of this T1 image. |
 | `tck` | `neuro/track/tck` | yes | A tractogram encoded according to the Mrtrix specifications. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `trk` | `neuro/track/trk` | The tractogram encoded following the TRK specifications. The reference space of streamlines is redefined according to the space of the T1 file given in input. |
 
-### 🧩 Convert tck to trk in DWI space
+### Convert tck to trk in DWI space
 
 > **Converts an MRtrix .tck tractogram to TrackVis .trk format with nibabel, using a DWI image as the reference space for the trk header; a format conversion utility.**
 
@@ -56,20 +56,20 @@ Loads the .tck streamlines with nibabel and saves them as track.trk with the vox
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/dwi` · `neuro/track/tck` |
-| 📤 **Outputs** | `neuro/track/trk` |
-| 🐳 **Container** | `brainlife/dipy:0.13` |
-| ⚙️ **Resources** | 8 CPUs · 0.17 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.132](https://doi.org/10.25663/brainlife.app.132) |
+| **Inputs** | `neuro/dwi` · `neuro/track/tck` |
+| **Outputs** | `neuro/track/trk` |
+| **Container** | `brainlife/dipy:0.13` |
+| **Resources** | 8 CPUs · 0.17 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.132](https://doi.org/10.25663/brainlife.app.132) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `dwi` | `neuro/dwi` | yes | The DWI file will provide the reference space for the tractogram in output stored according to the TRK specifications. The tck streamlines must already be in the space of this DWI image. |
 | `tck` | `neuro/track/tck` | yes | A tractogram encoded according to the Mrtrix specifications. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
@@ -77,7 +77,7 @@ Loads the .tck streamlines with nibabel and saves them as track.trk with the vox
 
 <!-- brainlife-app:end -->
 
-## 🏷️ Versions on brainlife.io
+## Versions on brainlife.io
 
 Both Apps are built from the [`1.0`](https://github.com/brainlife/app-convert-tck-to-trk/tree/1.0) branch and run the same code; they differ only in the reference image you give them.
 
@@ -86,17 +86,17 @@ Both Apps are built from the [`1.0`](https://github.com/brainlife/app-convert-tc
 | **Convert tck to trk in T1 space** (this branch) | T1-weighted (`neuro/anat/t1w`) | [`1.0`](https://github.com/brainlife/app-convert-tck-to-trk/tree/1.0) | [doi:10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133) | current |
 | **Convert tck to trk in DWI space** (this branch) | DWI (`neuro/dwi`) | [`1.0`](https://github.com/brainlife/app-convert-tck-to-trk/tree/1.0) | [doi:10.25663/brainlife.app.132](https://doi.org/10.25663/brainlife.app.132) | current |
 
-## 🔬 How it works
+## How it works
 
 The App loads the `.tck` streamlines with [nibabel](https://nipy.org/nibabel/) and saves them as `track.trk`, with the voxel-to-RAS affine, voxel sizes, dimensions and voxel order of the trk header taken from the reference NIfTI image. The streamlines themselves are not transformed, so the tractogram must already be in the space of the reference image.
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133) (T1 space) or [doi.org/10.25663/brainlife.app.132](https://doi.org/10.25663/brainlife.app.132) (DWI space), choose a `neuro/track/tck` tractogram and the matching reference image from your project and press **Execute**. The converted tractogram is archived to your project as a `neuro/track/trk` dataset, tagged `t1` or `dwi` after the reference space.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/). `main` runs the conversion inside the `brainlife/dipy:0.13` container. Without Singularity, install Python with nibabel and run `./convert_tck_to_trk.py` directly.
 
@@ -116,7 +116,7 @@ You need [Singularity/Apptainer](https://apptainer.org/). `main` runs the conver
    ./main
    ```
 
-### 🧪 Sample data
+### Sample data
 
 Download a sample tractogram and DWI from brainlife.io with the [brainlife CLI](https://github.com/brainlife/cli):
 
@@ -128,18 +128,18 @@ bl dataset download 5a0e604116e499548135de87 && mv 5a0e604116e499548135de87 inpu
 bl dataset download 5a0dcb1216e499548135dd27 && mv 5a0dcb1216e499548135dd27 input/dtiinit
 ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 trk/
 └── track.trk    the tractogram in TrackVis format
 ```
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`failed`**: `track.trk` was not written or is empty. Check that the `.tck` file is valid and that the reference image is a readable NIfTI.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -152,14 +152,14 @@ trk/
 - Garyfallidis et al. Dipy, a library for the analysis of diffusion MRI data. *Frontiers in Neuroinformatics* 8 (2014). [doi:10.3389/fninf.2014.00008](https://doi.org/10.3389/fninf.2014.00008)
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 
-## 👥 Authors
+## Authors
 
 - Franco Pestilli (project director)
 - Paolo Avesani
 
 **Contributors:** Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -178,6 +178,6 @@ trk/
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](LICENSE). nibabel is distributed under its own [license](https://github.com/nipy/nibabel/blob/master/COPYING).
