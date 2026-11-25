@@ -3,6 +3,30 @@
 
 # app-convert-tck-to-trk
 
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Converts an MRtrix .tck tractogram to TrackVis .trk format with nibabel, using a T1-weighted image as the reference space for the trk header; a format conversion utility.**
+
+Loads the .tck streamlines with nibabel and saves them as track.trk with the voxel-to-RAS affine, voxel sizes, dimensions and voxel order taken from the T1-weighted NIfTI. Use it when a downstream tool needs .trk; the streamlines are not transformed, so the tractogram must already be in the space of the T1-weighted image.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.133](https://doi.org/10.25663/brainlife.app.133)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `t1` | `neuro/anat/t1w` | yes | T1-weighted NIfTI image that provides the reference space (affine, voxel size, dimensions) for the output trk header. The tck streamlines must already be in the space of this T1 image. |
+| `tck` | `neuro/track/tck` | yes | A tractogram encoded according to the Mrtrix specifications. |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `trk` | `neuro/track/trk` | The tractogram encoded following the TRK specifications. The reference space of streamlines is redefined according to the space of the T1 file given in input. |
+
+Runtime: container `brainlife/dipy:0.13`; 8 CPUs; 0.17 h walltime.
+
+Please cite:
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 This service will convert a .tck file to .trk file format using nibabel. 
 
 ### Authors
