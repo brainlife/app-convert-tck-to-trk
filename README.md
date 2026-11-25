@@ -13,7 +13,7 @@ This service will convert a .tck file to .trk file format using nibabel.
 - Soichi Hayashi (hayashis@iu.edu)
 
 ### Project Director
-- Franco Pestilli (franpest@indiana.edu)
+- Franco Pestilli ([@francopestilli](https://github.com/francopestilli))
 
 ### Funding Acknowledgment
 brainlife.io is publicly funded and for the sustainability of the project it is helpful to Acknowledge the use of the platform. We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
